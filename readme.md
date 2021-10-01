@@ -6,25 +6,16 @@ First is executed bash script then python script. All the output is saved in the
 
 ## Startup execution
 
-1. Add script to /etc/init.d/<script_name>.sh
-
-2. Make script executable
+Startup executing using crontab.
 ```
-$ chmod +x /etc/init.d/<script_name>.sh
+$ crontab -e sh /media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log 2>&1
 ```
 
-3. Register script
-```
-$ sudo update-rc.d <script_name>.sh defaults
-```
+and append the following line to the end of crontab file:
 
-**Script**:
 ```
-# Execute script and append output to file
-printf "\n\n" >> /media/NTFS/startup/sartup.log
-./media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log
+@reboot 
 ```
-
 
 ## Mounting NTFS partition
 
@@ -38,5 +29,7 @@ To automaticall mount partition at startup, use the following:
 
 Add the following to */etc/fstab*:
 ```
-$ /dev/mmcblk0p3  /media/NTFS     NTFS    defaults          0       0
+$ /dev/mmcblk0p3  /media/NTFS     ntfs    defaults          0       2
 ```
+
+PS: Make sure /media/NTFS folder exists.
