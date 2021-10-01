@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Script editable from windows that is executed at startup
 
 # Function used to log events

@@ -1,0 +1,11 @@
+
+/media/NTFS/startup/startup.sh: 4: function: not found
+[2021-10-01 21:26:02,219] 
+/media/NTFS/startup/startup.sh: 11: log: not found
+/media/NTFS/startup/startup.sh: 13: log: not found
+[2021-10-01 21:26:02.641] Python executed successfully
+/media/NTFS/startup/startup.sh: 4: function: not found
+[2021-10-01 21:28:06,726] 
+/media/NTFS/startup/startup.sh: 11: log: not found
+/media/NTFS/startup/startup.sh: 13: log: not found
+[2021-10-01 21:28:06.762] Python executed successfully
