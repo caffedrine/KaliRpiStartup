@@ -6,15 +6,15 @@ First is executed bash script then python script. All the output is saved in the
 
 ## Startup execution
 
-Startup executing using crontab.
+Startup executing using crontab (select an editor from the list)
 ```
-$ crontab -e sh /media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log 2>&1
+$ crontab -e
 ```
 
 and append the following line to the end of crontab file:
 
 ```
-@reboot 
+@reboot crontab -e sh /media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log 2>&1
 ```
 
 ## Mounting NTFS partition
