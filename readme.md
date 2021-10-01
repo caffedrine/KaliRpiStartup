@@ -14,7 +14,7 @@ $ crontab -e
 and append the following line to the end of crontab file:
 
 ```
-@reboot crontab -e /bin/bash /media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log 2>&1
+@reboot /bin/bash /media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log 2>&1
 ```
 
 ## Mounting NTFS partition
