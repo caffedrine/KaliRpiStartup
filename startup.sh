@@ -11,4 +11,4 @@ function log
 log "RPI Startup execution start..."
 
 log "Executing startup.py..."
-python startup.py
+python /media/NTFS/startup/startup.py

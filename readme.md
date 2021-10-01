@@ -24,3 +24,19 @@ $ sudo update-rc.d <script_name>.sh defaults
 printf "\n\n" >> /media/NTFS/startup/sartup.log
 ./media/NTFS/startup/startup.sh >> /media/NTFS/startup/startup.log
 ```
+
+
+## Mounting NTFS partition
+
+NTFS partition shall be created with GParted and mounted like this:
+
+```
+$ sudo mount /dev/mmcblk0p3 -t ntfs-3g -o permissions /media/NTFS
+```
+
+To automaticall mount partition at startup, use the following:
+
+Add the following to */etc/fstab*:
+```
+$ /dev/mmcblk0p3  /media/NTFS     NTFS    defaults          0       0
+```
