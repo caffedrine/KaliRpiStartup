@@ -6,7 +6,6 @@ then
     #########################
     # Session/Window 0
     #########################
-    cd ~
     tmux new-session               -ds $session_name
     tmux set-window-option          -t $session_name     allow-rename off
     tmux rename-window              -t $session_name:0   OpenVPN
